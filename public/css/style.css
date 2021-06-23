@@ -1,0 +1,13 @@
+.sampul {
+  width: 100px;
+}
+a {
+  color: rgb(68, 68, 68);
+}
+
+a:hover {
+  color: rgb(133, 133, 133);
+  text-decoration: none;
+}
+.table {
+}
