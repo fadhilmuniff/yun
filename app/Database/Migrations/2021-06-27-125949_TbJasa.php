@@ -4,7 +4,7 @@ namespace App\Database\Migrations;
 
 use CodeIgniter\Database\Migration;
 
-class Kelas extends Migration
+class TbJasa extends Migration
 {
 	public function up()
 	{
@@ -15,41 +15,34 @@ class Kelas extends Migration
 				'unsigned'       => true,
 				'auto_increment' => true
 			],
-			'nama_mentor'       => [
+			'nama_jasa'       => [
 				'type'           => 'VARCHAR',
 				'constraint'     => '255'
 			],
-			'keterangan'      => [
+			'jenis_jasa'      => [
 				'type'           => 'VARCHAR',
 				'constraint'     => '255'
 			],
-			'harga' => [
-				'type'           => 'INT',
-				'constraint'     => 100
-			],
-			'link'      => [
+			'alamat' => [
 				'type'           => 'VARCHAR',
 				'constraint'     => '255'
 			],
-			'materi'      => [
+			'deskripsi'      => [
 				'type'           => 'VARCHAR',
 				'constraint'     => '255'
-			],
-			'status'      => [
-				'type'           => 'INT',
-				'constraint'     => 1
-			],
+			]
+
 		]);
 
 		// Membuat primary key
 		$this->forge->addKey('id', TRUE);
 
 		// Membuat tabel news
-		$this->forge->createTable('kelas', TRUE);
+		$this->forge->createTable('jasa', TRUE);
 	}
 
 	public function down()
 	{
-		$this->forge->dropTable('kelas');
+		$this->forge->dropTable('jasa');
 	}
 }
